@@ -1,4 +1,4 @@
-# Aplikasi Autentikasi Node.js dengan PostgreSQL
+# Aplikasi Autentikasi Node.js dengan Express.js
 
 Aplikasi ini adalah API untuk autentikasi pengguna menggunakan Node.js dengan Express.js sebagai framework dan PostgreSQL sebagai database. Ini adalah panduan singkat untuk menjalankan, menguji, dan mengkonfigurasi aplikasi ini.
 
@@ -6,9 +6,11 @@ Aplikasi ini adalah API untuk autentikasi pengguna menggunakan Node.js dengan Ex
 
 ### Persyaratan
 
-Untuk menjalankan aplikasi ini, pastikan Anda telah menginstal Docker. Jika Anda belum memiliki Docker, Anda dapat mengunduhnya dari [situs resmi Docker](https://www.docker.com/get-started).
+Untuk menjalankan aplikasi ini, Anda memiliki dua opsi:
 
-### Menggunakan Docker
+#### Opsi 1: Menggunakan Docker (Disarankan)
+
+**Sangat disarankan** untuk menggunakan Docker. Docker adalah cara termudah dan paling aman untuk menjalankan aplikasi ini tanpa masalah konfigurasi. Jika Anda belum memiliki Docker, Anda dapat mengunduhnya dari [situs resmi Docker](https://www.docker.com/get-started).
 
 1. Buka terminal dan arahkan ke direktori aplikasi ini.
 2. Jalankan perintah berikut untuk memulai layanan Docker:
@@ -19,9 +21,11 @@ Untuk menjalankan aplikasi ini, pastikan Anda telah menginstal Docker. Jika Anda
 
    Aplikasi ini akan berjalan di port 5000.
 
-### Tanpa Docker
+**Catatan**: Menggunakan Docker sangat disarankan untuk menghindari kesalahan tak terduga.
 
-Jika Anda ingin menjalankan aplikasi ini tanpa Docker, pastikan Anda memiliki PostgreSQL terinstal di komputer Anda. Selain itu, Anda perlu mengatur beberapa konfigurasi di file `.env`.
+#### Opsi 2: Tanpa Docker
+
+Jika Anda memilih **tidak menggunakan Docker**, pastikan Anda memiliki PostgreSQL terinstal di komputer Anda dan telah membuat database dengan nama "users" Selain itu, Anda perlu mengatur beberapa konfigurasi di file `.env`.
 
 1. Buka file `.env` dan temukan baris berikut:
 
@@ -37,7 +41,9 @@ Jika Anda ingin menjalankan aplikasi ini tanpa Docker, pastikan Anda memiliki Po
 
 3. Simpan perubahan pada file `.env`.
 
-4. Jalankan aplikasi dengan salah satu perintah berikut:
+4. Pastikan database PostgreSQL berjalan sebelum melakukan pengujian.
+
+5. Jalankan aplikasi dengan salah satu perintah berikut:
 
    - Menggunakan Nodemon (untuk pengembangan):
 
@@ -53,7 +59,9 @@ Jika Anda ingin menjalankan aplikasi ini tanpa Docker, pastikan Anda memiliki Po
 
 ## Pengujian
 
-Aplikasi ini dilengkapi dengan pengujian menggunakan Supertest dan Jest. Untuk menjalankan pengujian, jalankan perintah berikut:
+Aplikasi ini dilengkapi dengan pengujian menggunakan Supertest dan Jest. Sebelum melakukan pengujian, pastikan database PostgreSQL telah berjalan.
+
+Untuk menjalankan pengujian, jalankan perintah berikut:
 
 ```bash
 npm run test

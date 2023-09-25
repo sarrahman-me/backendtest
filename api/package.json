@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarrahman-me/backend-test.git"
+    "url": "git+https://github.com/sarrahman-me/backendtest.git"
   },
   "author": "muhammad nur rahman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sarrahman-me/backend-test/issues"
+    "url": "https://github.com/sarrahman-me/backendtest/issues"
   },
-  "homepage": "https://github.com/sarrahman-me/backend-test#readme",
+  "homepage": "https://github.com/sarrahman-me/backendtest#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
@@ -33,6 +33,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.3",
+    "retry": "^0.13.1",
     "sequelize": "^6.33.0",
     "validator": "^13.11.0",
     "winston": "^3.10.0"
