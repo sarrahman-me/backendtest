@@ -1,0 +1,29 @@
+version: "3"
+services:
+  auth-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: auth-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    networks:
+      - backendtest
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=users
+    container_name: postgres
+    networks:
+      - backendtest
+
+networks:
+  backendtest:
+    driver: bridge
